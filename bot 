@@ -1,4 +1,4 @@
-// Remplacez 'YOUR_BOT_TOKEN' par le token de votre bot Telegram
+ // Remplacez 'YOUR_BOT_TOKEN' par le token de votre bot Telegram
 const botToken = '6606813592:AoUpIAztRKUfRigt1prD1L-_HUZzQ';
 
 // Remplacez 'YOUR_CHAT_ID' par votre ID de chat Telegram
