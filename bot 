@@ -1,0 +1,30 @@
+// Remplacez 'YOUR_BOT_TOKEN' par le token de votre bot Telegram
+const botToken = '6606813592:AoUpIAztRKUfRigt1prD1L-_HUZzQ';
+
+// Remplacez 'YOUR_CHAT_ID' par votre ID de chat Telegram
+const chatId = '52609';
+
+// URL de l'API Telegram pour envoyer un message
+const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+// Fonction pour envoyer un message à Telegram
+function sendMessage(message) {
+    fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            chat_id: chatId,
+            text: message,
+        }),
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Erreur lors de l\'envoi du message:', error));
+}
+
+// Exemple d'utilisation
+const alertMessage = 'Alert: BTCUSD Buy Signal';
+sendMessage(alertMessage);
+
